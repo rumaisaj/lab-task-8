@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Timeline</title>
+    <style>
+        /* General Styling for the Body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        /* Styling for the ordered list */
+        ol {
+            counter-reset: list-counter; /* Custom counter for nested numbering */
+            font-size: 16px;
+            padding-left: 20px; /* Adds indentation for the list */
+        }
+
+        /* Styling for list items */
+        li {
+            margin: 10px 0; /* Adds spacing between items */
+        }
+
+        /* Custom numbering for nested lists */
+        li::before {
+            content: counters(list-counter, ".") " "; /* Use parent counters for nested items */
+            counter-increment: list-counter; /* Increment counter */
+            font-weight: bold;
+            color: #007BFF; /* Blue color for numbers */
+        }
+
+        /* Styling for nested lists */
+        ol ol {
+            padding-left: 20px; /* Additional indentation for nested lists */
+            margin-top: 10px;
+        }
+
+        /* Styling for nested list items */
+        ol ol li {
+            color: #555; /* Gray text for nested items */
+        }
+
+        /* Styling for headers */
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Timeline</h1>
+    <ol>
+        <li>Project Initiation
+            <ol>
+                <li>Define project goals</li>
+                <li>Identify stakeholders</li>
+                <li>Create project charter</li>
+            </ol>
+        </li>
+        <li>Planning Phase
+            <ol>
+                <li>Develop project plan
+                    <ol>
+                        <li>Scope definition</li>
+                        <li>Task allocation</li>
+                        <li>Schedule creation</li>
+                    </ol>
+                </li>
+                <li>Identify risks</li>
+                <li>Set up resources</li>
+            </ol>
+        </li>
+        <li>Execution Phase
+            <ol>
+                <li>Team coordination</li>
+                <li>Task implementation</li>
+                <li>Monitor progress</li>
+            </ol>
+        </li>
+        <li>Closure Phase
+            <ol>
+                <li>Deliver final project</li>
+                <li>Conduct review</li>
+                <li>Document lessons learned</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>
